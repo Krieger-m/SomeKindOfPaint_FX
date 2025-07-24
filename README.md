@@ -9,6 +9,6 @@ please enjoy!
 > [!NOTE]
 > Under construction!  
   
-![Screenshot preview](https://github.com/Krieger-m/SomeKindOfPaint_FX/blob/146a12b30abf2d6b58296ca1b687af32ae353059/src/main/resources/com/krieger/canvasPlayground/preview.png)
+![Screenshot preview](src/main/resources/com/krieger/canvasPlayground/preview.png)
 
   
