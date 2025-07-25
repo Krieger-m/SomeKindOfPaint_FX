@@ -1,4 +1,4 @@
-package com.krieger.canvasPlayground.layers;
+package com.krieger.canvasPlayground.layersModified;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
