@@ -26,8 +26,8 @@ public class LayersContent {
     ColorPicker backgroundPicker2;
     HBox menuContainer;
 
-    double x = 1080;
-    double y = 740;
+    double x = 1620;
+    double y = 1080;
 
     Layer1 l1;
     Layer2 l2;

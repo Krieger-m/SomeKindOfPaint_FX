@@ -24,7 +24,7 @@ public class Layer1 {
 
     public Layer1() {
         this.isActive = false;
-        this.can = new Canvas(1080,740);
+        this.can = new Canvas(1620,1080);
         this.context = can.getGraphicsContext2D();
         initLayer();
     }
@@ -53,7 +53,7 @@ public class Layer1 {
                             new Stop(0.0, l1picker1.getValue()),
                             new Stop(1.0, l1picker2.getValue()))
             );
-            context.setEffect(new DropShadow(BlurType.THREE_PASS_BOX,Color.web("#00000065"), 40, 0.2,5,30));
+            context.setEffect(new DropShadow(BlurType.THREE_PASS_BOX,Color.web("#1414144a"), 20, 0,4,4));
             context.fillOval(e.getX()-35,e.getY()-35,70,70);
         }
     };

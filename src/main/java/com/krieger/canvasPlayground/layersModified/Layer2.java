@@ -24,7 +24,7 @@ public class Layer2 {
 
     public Layer2() {
         this.isActive = false;
-        this.l2_can = new Canvas(1080,740);
+        this.l2_can = new Canvas(1620,1080);
         this.l2_context = l2_can.getGraphicsContext2D();
         initLayer();
     }
@@ -53,7 +53,7 @@ public class Layer2 {
                             new Stop(0.0, l2_picker1.getValue()),
                             new Stop(1.0, l2_picker2.getValue()))
             );
-            l2_context.setEffect(new DropShadow(BlurType.THREE_PASS_BOX,Color.web("#00000065"), 40, 0.2,5,30));
+            l2_context.setEffect(new DropShadow(BlurType.THREE_PASS_BOX,Color.web("#1414144a"), 30, 0,4,4));
             l2_context.fillOval(e.getX()-35,e.getY()-35,70,70);
         }
     };
