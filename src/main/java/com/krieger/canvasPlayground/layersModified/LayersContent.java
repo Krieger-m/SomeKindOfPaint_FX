@@ -24,6 +24,7 @@ public class LayersContent {
     // These pickers are now explicitly for the background
     ColorPicker backgroundPicker1;
     ColorPicker backgroundPicker2;
+    ColorPicker backgroundPicker3;
     HBox menuContainer;
 
     double x = 1620;
@@ -31,31 +32,34 @@ public class LayersContent {
 
     Layer1 l1;
     Layer2 l2;
+    Layer3 l3;
 
     Canvas layer1Canvas;
     Canvas layer2Canvas;
-    // Canvas layer3; // Commented out
+    Canvas layer3Canvas;
     GraphicsContext gc1;
     GraphicsContext gc2;
-    // GraphicsContext gc3; // Commented out
+    GraphicsContext gc3;
 
 
     public LayersContent() {
         l1 = new Layer1();
         l2 = new Layer2();
+        l3 = new Layer3();
 
         this.menuContainer = new HBox();
         this.root = new Group();
         this.borderPane = new BorderPane();
         this.layer1Canvas = l1.getL1_Can();
         this.layer2Canvas = l2.getL2_Can();
-//        this.layer3 = new Canvas(x,y); // Commented out
+        this.layer3Canvas = l3.getL3_Can();
         this.gc1 = l1.getL1_Context();
         this.gc2 = l2.getL2_Context();
-//        this.gc3 = layer3.getGraphicsContext2D(); // Commented out
+        this.gc3 = l3.getL3_Context();
+//        ---------------------->> continue adding Layer3 <<------------------     \\
 
         // Initialize background pickers directly
-        this.backgroundPicker1 = new ColorPicker(Color.web("#5ca7d9ff"));
+        this.backgroundPicker1 = new ColorPicker(Color.web("#797979ff"));
         this.backgroundPicker2 = new ColorPicker(Color.web("#BABDBF"));
     }
 

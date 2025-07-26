@@ -46,7 +46,7 @@ public class Layer1 {
     EventHandler<MouseEvent> layer1Handler = new EventHandler<MouseEvent>() {
         @Override
         public void handle(MouseEvent e) {
-            System.out.println(l1picker1.getValue());
+            // System.out.println(l1picker1.getValue());
             context.setFill(
                     new LinearGradient(0, 0, 1, 1, true,
                             CycleMethod.REFLECT,
@@ -54,7 +54,7 @@ public class Layer1 {
                             new Stop(1.0, l1picker2.getValue()))
             );
             context.setEffect(new DropShadow(BlurType.THREE_PASS_BOX,Color.web("#1414144a"), 20, 0,4,4));
-            context.fillOval(e.getX()-35,e.getY()-35,70,70);
+            context.fillOval(e.getX()-50,e.getY()-50,100,100);
         }
     };
 
