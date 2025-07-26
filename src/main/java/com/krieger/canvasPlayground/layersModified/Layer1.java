@@ -24,7 +24,7 @@ public class Layer1 {
 
     public Layer1() {
         this.isActive = false;
-        this.can = new Canvas(1620,1080);
+        this.can = new Canvas();
         this.context = can.getGraphicsContext2D();
         initLayer();
     }
@@ -39,8 +39,8 @@ public class Layer1 {
         this.l1picker2 = new ColorPicker();
     }
     public void setDefaultColors(){
-        this.l1picker1.setValue(Color.web("#55FA9B"));
-        this.l1picker2.setValue(Color.web("#BABDBF"));
+        this.l1picker1.setValue(Color.web("#1f19caff"));
+        this.l1picker2.setValue(Color.web("#fcff59ff"));
     }
 
     EventHandler<MouseEvent> layer1Handler = new EventHandler<MouseEvent>() {

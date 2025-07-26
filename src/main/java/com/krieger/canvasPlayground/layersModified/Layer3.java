@@ -5,6 +5,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.effect.BlurType;
+import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
@@ -24,7 +25,7 @@ public class Layer3 {
 
     public Layer3() {
         this.isActive = false;
-        this.l3_can = new Canvas(1620,1080);
+        this.l3_can = new Canvas();
         this.l3_context = l3_can.getGraphicsContext2D();
         initLayer();
     }
@@ -32,6 +33,7 @@ public class Layer3 {
     public void initLayer(){
         createColorPicker();
         setDefaultColors();
+        l3_can.setEffect(new BoxBlur(1,1,1));
     }
 
     public void createColorPicker(){
@@ -39,11 +41,11 @@ public class Layer3 {
         this.l3_picker2 = new ColorPicker();
     }
     public void setDefaultColors(){
-        this.l3_picker1.setValue(Color.web("#5ca7d9"));
-        this.l3_picker2.setValue(Color.web("#BABDBF"));
+        this.l3_picker1.setValue(Color.web("#ff00bbff"));
+        this.l3_picker2.setValue(Color.web("#6656e4ff"));
     }
 
-    EventHandler<MouseEvent> layer2Handler = new EventHandler<MouseEvent>() {
+    EventHandler<MouseEvent> layer3Handler = new EventHandler<MouseEvent>() {
         @Override
         public void handle(MouseEvent e) {
             // System.out.println(l2_picker1.getValue());
@@ -54,7 +56,7 @@ public class Layer3 {
                             new Stop(1.0, l3_picker2.getValue()))
             );
             l3_context.setEffect(new DropShadow(BlurType.THREE_PASS_BOX,Color.web("#1414144a"), 30, 0,4,4));
-            l3_context.fillRect(e.getX()-50,e.getY()-50,100,100);
+            l3_context.fillRoundRect(e.getX()-50,e.getY()-50,100,100,30,30);
         }
     };
 

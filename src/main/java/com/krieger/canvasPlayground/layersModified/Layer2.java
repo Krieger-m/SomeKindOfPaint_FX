@@ -24,7 +24,7 @@ public class Layer2 {
 
     public Layer2() {
         this.isActive = false;
-        this.l2_can = new Canvas(1620,1080);
+        this.l2_can = new Canvas();
         this.l2_context = l2_can.getGraphicsContext2D();
         initLayer();
     }

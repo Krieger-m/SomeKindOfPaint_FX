@@ -12,9 +12,12 @@ public class Layers extends Application {
 
         lc.addLayers();
 
+        Scene scene = new Scene(lc.root,1620,1080);
+        
 
-
-        Scene scene = new Scene(lc.root);
+        // Bind the BorderPane's preferred width and height to the scene's width and height
+        lc.borderPane.prefWidthProperty().bind(scene.widthProperty());
+        lc.borderPane.prefHeightProperty().bind(scene.heightProperty());
 
         stage.setScene(scene);
         stage.setTitle("Layers");
